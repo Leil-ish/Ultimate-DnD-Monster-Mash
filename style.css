@@ -1,0 +1,17 @@
+* {
+    box-sizing:border-box;
+}
+
+body {
+    max-width: 60%;
+    margin-left:20%;
+    margin-right:20%;
+}
+
+a {
+    cursor: pointer;
+}
+
+.textbox {
+    width:300px;
+}
