@@ -5,7 +5,8 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Ultimate D&D Monster Mash</title>
+    <title>Ultimate D&D Monster Mash</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 	<link rel="stylesheet" href="style.css">
 	<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous">
 	</script>
@@ -14,42 +15,23 @@
 <body>
     <section role="main">
         <h1>Welcome to the Ultimate D&D Monster Mash!</h1>
-        <p>
-            The UD&DMM is a resource for Battle-Royale-Style fights using monsters from the 5th Edition 
+        <p>The UD&DMM is a resource for Battle-Royale-Style fights using monsters from the 5th Edition 
             of Dungeons and Dragons. We'll help you match up 2-10 monsters for your game based on their abilities and 
-            strength. 
-        </p>
-        <p>
-            Here's what you'll need to do: 
+            strength.</p>
+        <p>Here's what you'll need to do: 
             <ol>
-                <li>
-                    Let us know how tough you want your monsters to be on a scale from 1 to 30.
-                </li>
-                <li>
-                    Tell us how many monsters you want for the battle (generally, one per player, but you do you!).
-                </li>
-                <li>
-                    Let us know if you want to restrict the monster results to non-legendary/non-immune/etc.
-                </li>
-                <li>
-                    Hit the "Roll for monsters!" button!
-                </li>
+                <li>Let us know how tough you want your monsters to be on a scale from 1 to 30.</li>
+                <li>Tell us how many monsters you want for the battle (generally, one per player, but you do you!).</li>
+                <li>Let us know if you want to restrict the monster results to non-legendary/non-immune/etc.</li>
+                <li>Hit the "Roll for monsters!" button!</li>
             </ol>
         </p>
         <form>
-            <label>Monster Difficulty (Challenge Rating)</label><br>
-                <input class="textbox" type="text"  placeholder="Enter a number from 1 to 30" 
-                id="js-challenge-rating"><br>
-            <label>Monsters in the Battle</label><br>
-                <input class="textbox" type="text" placeholder="Enter a number from 1 to 10"
-                id="js-battle-size"><br>
-            <h2>Restrictions</h2>
-                <input type = "checkbox" id = "js-no-legendary">
-                    <label for = "legendary">Don't show me legendary monsters</label><br>
-                <input type = "checkbox" id = "js-no-immune">
-                    <label for = "immune">Don't show me monsters with immunities</label><br>
-                <input type = "checkbox" id = "js-no-vulnerable">
-                    <label for = "no-vulnerable">Don't show me monsters with vulnerabilities</label><br>
+            <label>Maximum Monsters in the Battle (Note: At higher monster CRs or with more restrictions, 
+                    there may not be enough unique monsters for everyone in your group to have a different monster)</label><br>
+                <input type="number" required class="textbox" placeholder="Enter a number from 1 to 10" id="js-battle-size"><br>
+            <label>Monster Difficulty (Challenge Rating): Enter a number </label><br>
+                <input type="number" class="textbox" placeholder="Enter a number from 1 to 30" id="js-challenge-rating"><br>
                 <input type="submit" class="button" value="Roll for monsters!"></input>
             
         </form>
@@ -58,10 +40,10 @@
         <h1>We think these monsters will mash up well!</h1>
             <p id="results-list"></p>
                 <button onClick="window.print()">Save these results</button>
-                <input type="submit" class="button" value="Reroll monsters"></input>
             <h3>Running into trouble? Have any suggestions, fun stories, or house rules?</h3>
                 <button><a href="contact.html">Contact us!</a></button>
     </section>
+    <section id="js-error-message"></section>
     <script src="script.js"></script>
 </body>
 </html>

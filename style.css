@@ -1,15 +1,26 @@
 * {
     box-sizing:border-box;
+    font-family: 'Raleway', sans-serif;
+    line-height:30px;
 }
 
 body {
     max-width: 60%;
-    margin-left:20%;
-    margin-right:20%;
+    margin:5% 20%;
 }
 
-a {
-    cursor: pointer;
+.button {
+    cursor:pointer;
+    height:30px;
+    width:100px;
+    border-radius:5%;
+}
+
+button {
+    cursor:pointer;
+    height:30px;
+    width:200px;
+    border-radius:5%;
 }
 
 .textbox {
@@ -18,4 +29,8 @@ a {
 
 .hidden {
     display:none;
+}
+
+input {
+    margin:10px;
 }
