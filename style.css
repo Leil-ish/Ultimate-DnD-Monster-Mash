@@ -13,14 +13,12 @@ body {
     cursor:pointer;
     height:30px;
     width:200px;
-    border-radius:5%;
 }
 
 button {
     cursor:pointer;
     height:30px;
     width:200px;
-    border-radius:5%;
 }
 
 .textbox {
@@ -33,4 +31,9 @@ button {
 
 input {
     margin:10px;
+}
+
+ul {
+    list-style:none;
+    border:1px solid black;
 }
