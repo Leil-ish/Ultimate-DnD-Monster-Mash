@@ -16,7 +16,8 @@ function displayResults(responseJson, battleSize) {
                 <li><p>Damage Vulnerabilities: ${responseJson.results[i].damage_vulnerabilities}</p></li>
                 <li><p>Damage Resistances: ${responseJson.results[i].damage_resistances}</p></li>
                 <li><p>Damage Immunities: ${responseJson.results[i].damage_immunities}</p></li>
-                <li><p>Condition Immunities: ${responseJson.results[i].condition_immunities}</p></li>`
+                <li><p>Condition Immunities: ${responseJson.results[i].condition_immunities}</p></li>
+                <li><p>Actions: ${responseJson.results[i].actions.name}</p></li>`
     )}
   $('#results').removeClass('hidden');
 };
