@@ -9,7 +9,6 @@ function displayResults(responseJson, battleSize) {
       let keys = Object.keys(responseJson)
          return responseJson[keys[ keys.length * Math.random() << 0]];
          };
-    randomize;
   for (let i = 0; i < responseJson.results.length & i < battleSize; i++) {
     $('#results-list').append(
       `<p>${responseJson.results[i].name}</p>`
