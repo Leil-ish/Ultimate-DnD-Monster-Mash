@@ -2,9 +2,14 @@
 
 const searchURL = 'https://api.open5e.com/monsters';
 
-function displayResults(responseJson, battleSize, challengeRating) {
+function displayResults(responseJson, battleSize) {
   console.log(responseJson);
   $('#results-list').empty();
+  let randomize = function (responseJson) {
+      let keys = Object.keys(responseJson)
+         return responseJson[keys[ keys.length * Math.random() << 0]];
+         };
+    randomize;
   for (let i = 0; i < responseJson.results.length & i < battleSize; i++) {
     $('#results-list').append(
       `<p>${responseJson.results[i].name}</p>`
@@ -12,8 +17,6 @@ function displayResults(responseJson, battleSize, challengeRating) {
   };
   $('#results').removeClass('hidden');
 };
-
-
 
 function rollForMonsters(battleSize, challengeRating) {
 
