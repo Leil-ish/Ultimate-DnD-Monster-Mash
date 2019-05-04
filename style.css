@@ -13,5 +13,9 @@ a {
 }
 
 .textbox {
-    width:300px;
+    width:180px;
+}
+
+.hidden {
+    display:none;
 }

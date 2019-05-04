@@ -32,22 +32,35 @@
                     Let us know if you want to restrict the monster results to non-legendary/non-immune/etc.
                 </li>
                 <li>
-                    Hit the big "Roll for initiative!" button!
+                    Hit the "Roll for monsters!" button!
                 </li>
             </ol>
         </p>
         <form>
-            <label>Monster Difficulty (Challenge Rating)</label>
-                <input class="textbox" type="text" required placeholder="Enter a number from 1 to 30"><br>
-            <label>Monsters in the Battle</label>
-                <input class="textbox" type="text" required placeholder="Enter a number from 1 to 10">
+            <label>Monster Difficulty (Challenge Rating)</label><br>
+                <input class="textbox" type="text"  placeholder="Enter a number from 1 to 30" 
+                id="js-challenge-rating"><br>
+            <label>Monsters in the Battle</label><br>
+                <input class="textbox" type="text" placeholder="Enter a number from 1 to 10"
+                id="js-battle-size"><br>
             <h2>Restrictions</h2>
-                <input type = "checkbox" id = "no-legendary">
-                    <label for = "legendary">Don't show me legendary monsters</label>
-                <input type = "checkbox" id = "no-immune">
+                <input type = "checkbox" id = "js-no-legendary">
+                    <label for = "legendary">Don't show me legendary monsters</label><br>
+                <input type = "checkbox" id = "js-no-immune">
                     <label for = "immune">Don't show me monsters with immunities</label><br>
-            <button><a href="results.html">Go!</a></button>
+                <input type = "checkbox" id = "js-no-vulnerable">
+                    <label for = "no-vulnerable">Don't show me monsters with vulnerabilities</label><br>
+                <input type="submit" class="button" value="Roll for monsters!"></input>
+            
         </form>
+    </section>
+    <section id="results" class="hidden">
+        <h1>We think these monsters will mash up well!</h1>
+            <p id="results-list"></p>
+                <button onClick="window.print()">Save these results</button>
+                <button><a href="index.html">Reroll monsters</a></button><br>
+            <h3>Running into trouble? Have any suggestions, fun stories, or house rules?</h3>
+                <button><a href="contact.html">Contact us!</a></button>
     </section>
     <script src="script.js"></script>
 </body>
