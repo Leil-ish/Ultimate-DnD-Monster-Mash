@@ -7,7 +7,7 @@ function displayResults(responseJson, battleSize) {
   $('#results-list').empty();
   for (let i = 0; i < responseJson.results.length & i < battleSize; i++) {
         $('#results-list').append(
-            `<button class="collapsible">${responseJson.results[i].name}</button>
+            `<button class="collapsible">&#10133; ${responseJson.results[i].name}</button>
                 <div class="content">
                     <ul>
                         <li><p><a href = "https://beta.open5e.com/monsters/${responseJson.results[i].slug}/"  target="_blank">Full Stats</a></p></li>
