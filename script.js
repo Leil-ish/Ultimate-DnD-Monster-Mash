@@ -22,13 +22,14 @@ function displayResults(responseJson, battleSize) {
                 </div>`
     )}
   $('#results').removeClass('hidden');
-  var coll = document.getElementsByClassName("collapsible");
-  var i;
+
+  let coll = document.getElementsByClassName("collapsible");
+  let i;
 
   for (i = 0; i < coll.length; i++) {
   coll[i].addEventListener("click", function() {
       this.classList.toggle("active");
-      var content = this.nextElementSibling;
+      let content = this.nextElementSibling;
       if (content.style.display === "block") {
       content.style.display = "none";
       } else {
@@ -54,17 +55,52 @@ function rollForMonsters(battleSize, challengeRating) {
     })
     .then(responseJson => displayResults(responseJson, battleSize, challengeRating))
     .catch(err => {
-        $('#js-error-message').text(`Critical fail! ${err.message}`);
+        $('#js-results').text(`Critical fail! ${err.message}`);
     });
 }
+
+function validateChallengeRating() {
+    let x;
+    x = document.getElementById("js-challenge-rating").value;
+    if (isNaN(x) || x < 0 || x > 30) {
+        $('#results').empty();
+        $('#js-main').html(
+        `Challenge rating needs to be 0, 1/8, 1/4, 1/2, or an integer from 1 to 30.<br>
+        <form>
+        <input type="submit" class="button" value="Roll again?"></input>
+        </form>`
+        )
+    }
+    else {
+        const challengeRating = $('#js-challenge-rating').val();
+        const battleSize = $('#js-battle-size').val();
+        rollForMonsters(battleSize, challengeRating);
+    }
+}
+
+function validateBattleSize() {
+    let y;
+    y = document.getElementById("js-battle-size").value;
+    if (isNaN(y) || y < 2 || y > 10) {
+        $('#results').empty();
+        $('#js-main').html(
+            `Battle size needs to be an integer from 2 to 10.<br>
+            <form>
+            <input type="submit" class="button" value="Roll again?"></input>
+            </form>`
+        )
+    }
+    else {
+        validateChallengeRating();
+    }
+}
+
 
 
 function watchForm() {
   $('form').submit(event => {
     event.preventDefault();
-    const challengeRating = $('#js-challenge-rating').val();
-    const battleSize = $('#js-battle-size').val();
-    rollForMonsters(battleSize, challengeRating);
+    validateBattleSize();
   });
 }
 

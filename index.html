@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <section role="main">
+    <section role="main" id="js-main">
         <h1>Welcome to the Ultimate D&D Monster Mash!</h1>
         <p>The UD&DMM is a resource for Battle-Royale-Style fights using monsters from the 5th Edition 
             of Dungeons and Dragons. We'll help you match up 2-10 monsters for your game based on their abilities and 
@@ -35,7 +35,7 @@
                 <input type="number" required class="textbox" placeholder="Enter a number from 2 to 10" id="js-battle-size"><br>
             <label>Monster Difficulty (Challenge Rating), from 0 to 30. Note: 0, 1/8, 1/4, and 1/2
                     are valid inputs, as are integers from 1 to 30.</label><br>
-                <input type="text" class="textbox" placeholder="Enter a number from 0 to 30" id="js-challenge-rating"><br>
+                <input type="text" required class="textbox" placeholder="Enter a number from 0 to 30" id="js-challenge-rating"><br>
                 <input type="submit" class="button" value="Roll for monsters!"></input>
             
         </form>
@@ -47,7 +47,6 @@
             <h3>Running into trouble? Have any suggestions, fun stories, or house rules?</h3>
                 <button><a href="contact.html">Contact us!</a></button>
     </section>
-    <section id="js-error-message"></section>
     <script src="script.js"></script>
 </body>
 </html>
