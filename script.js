@@ -10,6 +10,7 @@ function displayResults(responseJson, battleSize) {
             `<button class="collapsible">${responseJson.results[i].name}</button>
                 <div class="content">
                     <ul>
+                        <li><p><a href = "https://beta.open5e.com/monsters/${responseJson.results[i].slug}/"  target="_blank">Full Stats</a></p></li>
                         <li><p>Type: ${responseJson.results[i].type}</p></li>
                         <li><p>Size: ${responseJson.results[i].size}</p></li>
                         <li><p>Armor Class: ${responseJson.results[i].armor_class}</p></li>
@@ -62,7 +63,7 @@ function rollForMonsters(battleSize, challengeRating) {
 function validateChallengeRating() {
     let x;
     x = document.getElementById("js-challenge-rating").value;
-    if (isNaN(x) || x < 0 || x > 30) {
+    if (x < 0 || x > 30) {
         $('#results').empty();
         $('#js-main').html(
         `Challenge rating needs to be 0, 1/8, 1/4, 1/2, or an integer from 1 to 30.<br>
