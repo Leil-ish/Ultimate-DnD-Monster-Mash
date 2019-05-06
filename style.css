@@ -7,6 +7,12 @@
 body {
     max-width: 60%;
     margin:5% 20%;
+    background-color:#181125;
+    color:#F28705;
+}
+
+#contactPage {
+    max-width:60%;
 }
 
 .button {
@@ -21,36 +27,93 @@ button {
     width:200px;
 }
 
+h1 {
+    font-size:45px;
+    line-height:50px;
+}
+
 .textbox {
-    width:180px;
+    width:250px;
+    font-size:14px;
+    margin:25px 0px;
 }
 
 .hidden {
     display:none;
 }
 
-input {
-    margin:10px;
+input.button {
+    cursor:pointer;
+    height:40px;
+    width:150px;
+    background-color:#f1f1f1;
+    color:#181125;
+    font-size:16px;
+    margin-top:10px;
+    padding:5px;
+}
+
+#contactLink {
+    cursor:pointer;
+    height:40px;
+    width:150px;
+    background-color:#f1f1f1;
+    color:#181125;
+    font-size:16px;
+    margin-top:10px;
+    padding:5px;
+    text-decoration: none;
+}
+
+#homeLink {
+    cursor:pointer;
+    height:40px;
+    width:150px;
+    background-color:#f1f1f1;
+    color:#181125;
+    font-size:16px;
+    margin-top:30px;
+    padding:5px;
+    text-decoration: none;
+}
+
+a {
+    text-decoration:none;
+    color:#181125;
+}
+
+#saveResults {
+    cursor:pointer;
+    height:40px;
+    width:150px;
+    background-color:#f1f1f1;
+    color:#181125;
+    font-size:16px;
+    margin-top:10px;
+    padding:5px;
+    text-decoration: none;
 }
 
 ul {
     list-style:none;
-    border:1px solid black;
+    color:#181125;
 }
 
 .collapsible {
-    background-color: #eee;
-    color: #444;
+    background-color: #f1f1f1;
+    color: #181125;
     cursor: pointer;
     width: 100%;
-    border: none;
+    height:40px;
+    border: 1px solid #181125;
     text-align: left;
     outline: none;
-    font-size: 15px;
+    font-size: 18px;
   }
   
   .active, .collapsible:hover {
-    background-color: #ccc;
+    background-color: #bfbac0;
+    color:#181125;
   }
   
   .content {
@@ -58,4 +121,34 @@ ul {
     display: none;
     overflow: hidden;
     background-color: #f1f1f1;
+  }
+
+  #statsLink {
+      background:#b19fb6;
+      border:1px solid #181125;
+      padding:10px;
+      border-radius:5%;
+      text-decoration:none;
+      cursor:pointer;
+      font-weight:bold;
+      color:#181125;
+      margin:100px 0px;
+  }
+
+  ul p {
+      margin:0px;
+  }
+
+  form p {
+      margin-top:0px;
+  }
+
+  #email-pic {
+      width:50px;
+      margin:30px 15% 30px 0px;
+  }
+
+  #github-pic {
+      width:50px;
+      margin:30px 15% 30px 10%;
   }
