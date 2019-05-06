@@ -28,8 +28,8 @@ button {
 }
 
 h1 {
-    font-size:45px;
-    line-height:50px;
+    font-size:30px;
+    line-height:40px;
 }
 
 .textbox {
@@ -97,6 +97,11 @@ a {
 ul {
     list-style:none;
     color:#181125;
+    padding-left:5px;
+}
+
+li {
+    border-bottom:1px solid #181125;
 }
 
 .collapsible {
@@ -108,7 +113,7 @@ ul {
     border: 1px solid #181125;
     text-align: left;
     outline: none;
-    font-size: 18px;
+    font-size: 15px;
   }
   
   .active, .collapsible:hover {
