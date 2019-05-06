@@ -18,8 +18,8 @@ function displayResults(responseJson, battleSize) {
                         <li><p>Damage Resistances: ${responseJson.results[i].damage_resistances}</p></li>
                         <li><p>Damage Immunities: ${responseJson.results[i].damage_immunities}</p></li>
                         <li><p>Condition Immunities: ${responseJson.results[i].condition_immunities}</p></li><br>
-                        <li><p><a href = "https://beta.open5e.com/monsters/${responseJson.results[i].slug}/" 
-                        target="_blank" id="statsLink">Full Stats & Actions</a></p></li>
+                        <p><a href = "https://beta.open5e.com/monsters/${responseJson.results[i].slug}/" 
+                        target="_blank" id="statsLink">Full Stats & Actions</a></p>
                     </ul>
                 </div>`
     )}
