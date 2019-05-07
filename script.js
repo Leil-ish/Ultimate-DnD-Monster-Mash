@@ -1,6 +1,8 @@
 'use strict';
 
+
 const searchURL = 'https://api.open5e.com/monsters';
+
 
 function displayResults(responseJson, battleSize) {
   console.log(responseJson);
