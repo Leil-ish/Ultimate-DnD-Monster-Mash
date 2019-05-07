@@ -41,6 +41,7 @@ function displayResults(responseJson, battleSize) {
   }
 };
 
+
 function rollForMonsters(battleSize, challengeRating) {
 
   const url = searchURL + '?' + 'challenge_rating=' + challengeRating;
@@ -61,6 +62,7 @@ function rollForMonsters(battleSize, challengeRating) {
     });
 }
 
+
 function validateChallengeRating() {
     let x;
     x = document.getElementById("js-challenge-rating").value;
@@ -79,6 +81,7 @@ function validateChallengeRating() {
         rollForMonsters(battleSize, challengeRating);
     }
 }
+
 
 function validateBattleSize() {
     let y;
@@ -105,5 +108,6 @@ function watchForm() {
     validateBattleSize();
   });
 }
+
 
 $(watchForm);
