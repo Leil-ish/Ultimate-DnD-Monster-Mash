@@ -5,9 +5,16 @@ const searchURL = 'https://api.open5e.com/monsters';
 
 
 function displayResults(responseJson, battleSize) {
-  console.log(responseJson);
-  $('#results-list').empty();
-  for (let i = 0; i < responseJson.results.length & i < battleSize; i++) {
+    //randomizing results to be displayed
+    for (let i = responseJson.results.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [responseJson.results[i], responseJson.results[j]] = [responseJson.results[j], responseJson.results[i]];
+    }
+
+    console.log(responseJson);
+    $('#results-list').empty();
+    //displays results according to specified battle size
+    for (let i = 0; i < responseJson.results.length & i < battleSize; i++) {
         $('#results-list').append(
             `<button class="collapsible">&#10133; ${responseJson.results[i].name}</button>
                 <div class="content">
@@ -27,6 +34,7 @@ function displayResults(responseJson, battleSize) {
     )}
   $('#results').removeClass('hidden');
 
+  //handles collapsible for results display
   let coll = document.getElementsByClassName("collapsible");
   let i;
 
