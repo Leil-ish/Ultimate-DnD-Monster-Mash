@@ -1,6 +1,6 @@
-# The Ultimate D&D Monster Mash
+# The Ultimate D&D Monster Match
 
-The published site can be found here! https://leil-ish.github.io/Ultimate-DnD-Monster-Mash/
+The published site can be found here! https://leil-ish.github.io/Ultimate-DnD-Monster-Match/
 
 This is a little app using the Open5e D&D API (https://api-beta.open5e.com/monsters/) and built with HTML, CSS, JavaScript, and jQuery. 
 
