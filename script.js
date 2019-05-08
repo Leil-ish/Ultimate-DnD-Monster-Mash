@@ -5,6 +5,7 @@ const searchURL = 'https://api.open5e.com/monsters';
 
 
 function displayResults(responseJson, battleSize) {
+
     //randomizing results to be displayed
     for (let i = responseJson.results.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -13,6 +14,7 @@ function displayResults(responseJson, battleSize) {
 
     console.log(responseJson);
     $('#results-list').empty();
+
     //displays results according to specified battle size
     for (let i = 0; i < responseJson.results.length & i < battleSize; i++) {
         $('#results-list').append(
@@ -53,7 +55,8 @@ function displayResults(responseJson, battleSize) {
 
 
 function rollForMonsters(battleSize, challengeRating) {
-
+    
+//fetches monsters of a given challenge rating
   const url = searchURL + '?' + 'challenge_rating=' + challengeRating;
 
   console.log(url);

@@ -136,34 +136,34 @@ li {
   }
 
   #statsLink {
-      background:#b19fb6;
-      border:1px solid #181125;
-      padding:5px;
-      border-radius:5%;
-      text-decoration:none;
-      cursor:pointer;
-      font-weight:bold;
-      color:#181125;
-      margin:100px 0px;
-      font-size:13px;
+    background:#b19fb6;
+    border:1px solid #181125;
+    padding:5px;
+    border-radius:5%;
+    text-decoration:none;
+    cursor:pointer;
+    font-weight:bold;
+    color:#181125;
+    margin:100px 0px;
+    font-size:13px;
   }
 
   ul p {
-      margin:0px;
+    margin:0px;
   }
 
   form p {
-      margin-top:0px;
+    margin-top:0px;
   }
 
   #email-pic {
-      width:50px;
-      margin:30px 15% 30px 0px;
+    width:50px;
+    margin:30px 15% 30px 0px;
   }
 
   #github-pic {
-      width:50px;
-      margin:30px 15% 30px 10%;
+    width:50px;
+    margin:30px 15% 30px 10%;
   }
 
 
