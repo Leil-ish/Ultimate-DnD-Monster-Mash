@@ -1,7 +1,7 @@
-'use strict';
+"use strict";
 
 
-const searchURL = 'https://api.open5e.com/monsters';
+const searchURL = "https://api.open5e.com/monsters";
 
 
 function displayResults(responseJson, battleSize) {
@@ -13,11 +13,11 @@ function displayResults(responseJson, battleSize) {
     }
 
     console.log(responseJson);
-    $('#results-list').empty();
+    $("#results-list").empty();
 
     //displays results according to specified battle size
     for (let i = 0; i < responseJson.results.length & i < battleSize; i++) {
-        $('#results-list').append(
+        $("#results-list").append(
             `<button class="collapsible">&#10133; ${responseJson.results[i].name}</button>
                 <div class="content">
                     <ul>
@@ -34,7 +34,7 @@ function displayResults(responseJson, battleSize) {
                     </ul>
                 </div>`
     )}
-  $('#results').removeClass('hidden');
+  $("#results").removeClass("hidden");
 
   //handles collapsible for results display
   let coll = document.getElementsByClassName("collapsible");
@@ -57,7 +57,7 @@ function displayResults(responseJson, battleSize) {
 function rollForMonsters(battleSize, challengeRating) {
     
 //fetches monsters of a given challenge rating
-  const url = searchURL + '?' + 'challenge_rating=' + challengeRating;
+  const url = searchURL + "?" + "challenge_rating=" + challengeRating;
 
   console.log(url);
 
@@ -71,7 +71,7 @@ function rollForMonsters(battleSize, challengeRating) {
     })
     .then(responseJson => displayResults(responseJson, battleSize, challengeRating))
     .catch(err => {
-        $('#js-results').text(`Critical fail! ${err.message}`);
+        $("#js-results").text(`Critical fail! ${err.message}`);
     });
 }
 
@@ -80,8 +80,8 @@ function validateChallengeRating() {
     let x;
     x = document.getElementById("js-challenge-rating").value;
     if (x < 0 || x > 30) {
-        $('#results').empty();
-        $('#js-main').html(
+        $("#results").empty();
+        $("#js-main").html(
         `<h2>Challenge rating needs to be 0, 1/8, 1/4, 1/2, or an integer from 1 to 30.</h2><br>
         <form>
         <input type="submit" class="button" value="Roll again?"></input>
@@ -89,8 +89,8 @@ function validateChallengeRating() {
         )
     }
     else {
-        const challengeRating = $('#js-challenge-rating').val();
-        const battleSize = $('#js-battle-size').val();
+        const challengeRating = $("#js-challenge-rating").val();
+        const battleSize = $("#js-battle-size").val();
         rollForMonsters(battleSize, challengeRating);
     }
 }
@@ -100,8 +100,8 @@ function validateBattleSize() {
     let y;
     y = document.getElementById("js-battle-size").value;
     if (isNaN(y) || y < 2 || y > 10) {
-        $('#results').empty();
-        $('#js-main').html(
+        $("#results").empty();
+        $("#js-main").html(
             `<h2>Battle size needs to be an integer from 2 to 10.</h2><br>
             <form>
             <input type="submit" class="button" value="Roll again?"></input>
@@ -116,7 +116,7 @@ function validateBattleSize() {
 
 
 function watchForm() {
-  $('form').submit(event => {
+  $("form").submit(event => {
     event.preventDefault();
     validateBattleSize();
   });
